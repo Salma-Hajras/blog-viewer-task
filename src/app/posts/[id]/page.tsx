@@ -7,11 +7,10 @@ type Post = {
   body: string;
 };
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
+type PageProps = {
+  params: { id: string };
+};
+
 
 // SEO Metadata
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
