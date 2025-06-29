@@ -39,7 +39,7 @@ export default async function PostDetails({ params }: PageProps) {
     return (
       <div className="p-8 bg-white rounded shadow text-center text-red-600 space-y-4">
         <h2 className="text-2xl font-bold">404 - Post Not Found</h2>
-        <p className="text-gray-600">The post you're looking for doesn't exist.</p>
+        <p className="text-gray-600">The post you are looking for does not exist.</p>
         <Link
           href="/posts"
           className="inline-block text-blue-500 hover:underline font-medium"
