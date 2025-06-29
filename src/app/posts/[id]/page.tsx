@@ -1,13 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
-
-// SEO Metadata
-export async function generateMetadata({
-  params,
-}: {
-  params: { id: string };
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   try {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`);
     const post = await res.json();
@@ -24,20 +18,18 @@ export async function generateMetadata({
   }
 }
 
-//  Post Details Page
-export default async function PostDetails({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function PostDetails({ params }: { params: { id: string } }) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`);
 
   if (!res.ok) {
     return (
       <div className="p-8 bg-white rounded shadow text-center text-red-600 space-y-4">
         <h2 className="text-2xl font-bold">404 - Post Not Found</h2>
-        <p className="text-gray-600">The post you are looking for does not exist.</p>
-        <Link href="/posts" className="inline-block text-blue-500 hover:underline font-medium">
+        <p className="text-gray-600">The post you&#39;re looking for doesn&#39;t exist.</p>
+        <Link
+          href="/posts"
+          className="inline-block text-blue-500 hover:underline font-medium"
+        >
           ← Back to Posts
         </Link>
       </div>
