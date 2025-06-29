@@ -18,11 +18,11 @@ interface Props {
 
 export default function PostsPageClient({ posts, currentPage, totalPages }: Props) {
   const searchParams = useSearchParams();
-
+  const pageParam = searchParams.get("page"); 
   // Scroll to top on page change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [searchParams.get("page")]);
+  }, [pageParam]); 
 
   return (
     <main className="px-6 py-10 space-y-8">
