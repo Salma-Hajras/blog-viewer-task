@@ -37,7 +37,8 @@ export default async function PostDetails({ params }: Params) {
     return (
       <div className="p-8 max-w-xl mx-auto bg-white rounded shadow text-center text-red-700 space-y-4 mt-10">
         <h2 className="text-2xl font-bold">404 - Post Not Found</h2>
-        <p className="text-gray-600">The post you're looking for doesn't exist.</p>
+       <p className="text-gray-600">The post you are looking for does not exist.</p>
+
         <Link
           href="/posts"
           className="inline-block mt-2 px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
